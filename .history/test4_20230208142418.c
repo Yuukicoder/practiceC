@@ -17,7 +17,7 @@ int main()
     }
     d = c2 - c1;
     printf("Difference: %d\n", d);
-    fo(c, c2, c1)
+    = fo(c, c2, c1)
     {
         printf("%c : %d, %o, %X\n", c, c, c, c);
     }

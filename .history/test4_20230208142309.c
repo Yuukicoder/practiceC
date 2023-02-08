@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define fo(i, a, b) for (char i = a; i >= b; i++)
+#define fo(i, a, b) for (int i = a; i <= b; i++)
 #define fod(i, a, b) for (int i = b; i >= a; i--)
 int main()
 {
@@ -17,7 +17,7 @@ int main()
     }
     d = c2 - c1;
     printf("Difference: %d\n", d);
-    fo(c, c2, c1)
+    for (c = c2; c >= c1; c++)
     {
         printf("%c : %d, %o, %X\n", c, c, c, c);
     }
