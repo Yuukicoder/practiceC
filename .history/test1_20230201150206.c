@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+
+    double num1, num2, result;
+    char op;
+TEST:
+    printf("Enter an expression in the format 'num1 operator num2': ");
+    scanf("%lf%c%lf", &num1, &op, &num2);
+
+    switch (op)
+    {
+    case '+':
+        result = num1 + num2;
+        break;
+    case '-':
+        result = num1 - num2;
+        break;
+    case '/':
+        if (num2 == 0)
+        {
+            printf("Error: Cannot divide by 0\n");
+            return 0;
+        }
+        result = num1 / num2;
+        break;
+    case '*':
+        result = num1 * num2;
+        break;
+    default:
+        printf("Invalid operator\n");
+
+        while (op != '+' || op != '-' || op != '/' || op != '*')
+        {
+            char choice;
+            printf("\nDo you want to continue? (y/n): \n");
+            scanf(" %c", &choice);
+            if (choice == 'y')
+            {
+                goto TEST;
+            }
+            if (choice == 'n')
+            {
+                return 0;
+            }
+        }
+    }
+    printf(" Result: %lf", result);
+    return 0;
+}
