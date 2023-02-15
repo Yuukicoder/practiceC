@@ -1,0 +1,1 @@
+// write a c program that will accept the integral part and fraction of a real number then print out the this real number

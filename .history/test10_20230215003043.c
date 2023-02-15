@@ -1,0 +1,21 @@
+// write a c program that will accept a positive integer n, n>=2 then print out primes between 2 to n
+// idea: function return prime + while 2 to n
+#include <stdio.h>
+#define fo(i, a, b) for (int i = a; i <= b; i++)
+#define fod(i, a, b) for (int i = b; i >= a; i--)
+int prime(int n)
+{
+    int m = sqrt(n);
+    int i;
+    if (n < 2)
+        return 0;
+    fo(i, 2, m)
+    {
+        if (m % i == 0)
+            return 0;
+    }
+    return m;
+}
+int main()
+{
+}

@@ -1,2 +1,3 @@
- case 0:
-        break;
+ // do
+    // {
+    // } while (a <= 0 || b <= 0);
